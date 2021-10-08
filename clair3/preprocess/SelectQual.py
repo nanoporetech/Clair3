@@ -2,7 +2,7 @@ from sys import stdin
 from argparse import ArgumentParser
 import os
 
-from shared.utils import file_path_from, log_warning
+from clair3.shared.utils import file_path_from, log_warning
 
 major_contigs_order = ["chr" + str(a) for a in list(range(1, 23)) + ["X", "Y"]] + [str(a) for a in
                                                                                    list(range(1, 23)) + ["X", "Y"]]

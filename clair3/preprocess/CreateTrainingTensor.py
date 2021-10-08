@@ -12,15 +12,15 @@ import logging
 logging.getLogger().setLevel(logging.INFO)
 
 
-from shared.command_options import (
+from clair3.shared.command_options import (
     CommandOption,
     CommandOptionWithNoValue,
     ExecuteCommand,
     command_string_from,
     command_option_from
 )
-from shared.utils import file_path_from, executable_command_string_from, subprocess_popen, str2bool, log_warning
-import shared.param_p as param
+from clair3.shared.utils import file_path_from, executable_command_string_from, subprocess_popen, str2bool, log_warning
+import clair3.shared.param_p as param
 
 
 class InstancesClass(object):

@@ -1,8 +1,8 @@
 import shlex
 import sys
-from shared.intervaltree.intervaltree import IntervalTree
 
-from shared.utils import subprocess_popen
+from clair3.shared.intervaltree.intervaltree import IntervalTree
+from clair3.shared.utils import subprocess_popen
 
 
 def bed_tree_from(bed_file_path, expand_region=None, contig_name=None, bed_ctg_start=None, bed_ctg_end=None,

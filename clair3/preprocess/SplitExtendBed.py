@@ -1,8 +1,9 @@
 import sys
 import shlex
 from argparse import ArgumentParser
-import shared.param_p as param
-from shared.utils import subprocess_popen
+
+import clair3.shared.param_p as param
+from clair3.shared.utils import subprocess_popen
 
 def split_extend_bed(args):
 

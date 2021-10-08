@@ -11,7 +11,7 @@ logging.basicConfig(format='%(message)s', level=logging.INFO)
 tf.get_logger().setLevel(logging.ERROR)
 
 from clair3.task.main import GT21, GENOTYPE, VARIANT_LENGTH_1, VARIANT_LENGTH_2
-import shared.param_f as param
+import clair3.shared.param_f as param
 params = dict(
             float_type=tf.float32,
             task_loss_weights=[

@@ -1,6 +1,7 @@
 import sys
 from importlib import import_module
-from shared.param_p import REPO_NAME
+
+from clair3.shared.param_p import REPO_NAME
 
 DATA_PREP_SCRIPTS_FOLDER="preprocess"
 DEEP_LEARNING_FOLDER="clair3"

@@ -9,11 +9,11 @@ from os.path import isfile
 from argparse import ArgumentParser, SUPPRESS
 from collections import Counter, defaultdict, OrderedDict
 
-import shared.param_f as param
-from shared.utils import subprocess_popen, file_path_from, IUPAC_base_to_num_dict as BASE2NUM, region_from, \
+import clair3.shared.param_f as param
+from clair3.shared.utils import subprocess_popen, file_path_from, IUPAC_base_to_num_dict as BASE2NUM, region_from, \
     reference_sequence_from, str2bool, vcf_candidates_from
-from shared.interval_tree import bed_tree_from, is_region_in
-from shared.intervaltree.intervaltree import IntervalTree
+from clair3.shared.interval_tree import bed_tree_from, is_region_in
+from clair3.shared.intervaltree.intervaltree import IntervalTree
 
 logging.basicConfig(format='%(message)s', level=logging.INFO)
 BASES = set(list(BASE2NUM.keys()) + ["-"])

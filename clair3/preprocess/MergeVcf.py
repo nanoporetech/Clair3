@@ -7,10 +7,11 @@ import heapq
 logging.basicConfig(format='%(message)s', level=logging.INFO)
 
 from argparse import ArgumentParser, SUPPRESS
-from shared.utils import subprocess_popen, str2bool, log_error, log_warning
-import shared.param_f as param
-from shared.interval_tree import bed_tree_from, is_region_in
-from preprocess.utils import gvcfGenerator
+
+from clair3.shared.utils import subprocess_popen, str2bool, log_error, log_warning
+import clair3.shared.param_f as param
+from clair3.shared.interval_tree import bed_tree_from, is_region_in
+from clair3.preprocess.utils import gvcfGenerator
 
 
 def update_haploid_precise_genotype(columns):

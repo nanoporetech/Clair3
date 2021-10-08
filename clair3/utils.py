@@ -8,8 +8,8 @@ import numpy as np
 from functools import partial
 
 from clair3.task.main import *
-from shared.interval_tree import bed_tree_from, is_region_in
-from shared.utils import subprocess_popen, IUPAC_base_to_ACGT_base_dict as BASE2BASE, IUPAC_base_to_num_dict as BASE2NUM
+from clair3.shared.interval_tree import bed_tree_from, is_region_in
+from clair3.shared.utils import subprocess_popen, IUPAC_base_to_ACGT_base_dict as BASE2BASE, IUPAC_base_to_num_dict as BASE2NUM
 
 FILTERS = tables.Filters(complib='blosc:lz4hc', complevel=5)
 shuffle_bin_size = 50000

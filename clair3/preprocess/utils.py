@@ -4,7 +4,8 @@ import os
 import sys
 import re
 logging.getLogger().setLevel(logging.INFO)
-from shared.utils import file_path_from
+
+from clair3.shared.utils import file_path_from
 
 use_mpmath = True
 try:

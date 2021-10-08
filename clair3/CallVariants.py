@@ -17,8 +17,8 @@ from clair3.task.gt21 import (
     HETERO_SNP_GT21, HETERO_SNP_LABELS, GT21_LABELS, partial_label_from, mix_two_partial_labels
 )
 import clair3.utils as utils
-from clair3.task.genotype import Genotype, genotype_string_from, genotype_enum_from, genotype_enum_for_task
-from shared.utils import IUPAC_base_to_ACGT_base_dict as BASE2ACGT, BASIC_BASES, str2bool, file_path_from, log_error, log_warning
+from clair3.clair3.task.genotype import Genotype, genotype_string_from, genotype_enum_from, genotype_enum_for_task
+from clair3.shared.utils import IUPAC_base_to_ACGT_base_dict as BASE2ACGT, BASIC_BASES, str2bool, file_path_from, log_error, log_warning
 from clair3.task.variant_length import VariantLength
 
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"

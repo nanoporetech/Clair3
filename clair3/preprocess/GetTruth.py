@@ -2,7 +2,8 @@ import sys
 import shlex
 from subprocess import PIPE
 from argparse import ArgumentParser
-from shared.utils import subprocess_popen
+
+from clair3.shared.utils import subprocess_popen
 
 class TruthStdout(object):
     def __init__(self, handle):

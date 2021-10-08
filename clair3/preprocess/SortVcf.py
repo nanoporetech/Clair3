@@ -5,7 +5,7 @@ from sys import stdin, exit
 from argparse import ArgumentParser
 from collections import defaultdict
 
-from shared.utils import log_error, log_warning, file_path_from
+from clair3.shared.utils import log_error, log_warning, file_path_from
 major_contigs_order = ["chr" + str(a) for a in list(range(1, 23)) + ["X", "Y"]] + [str(a) for a in
                                                                                    list(range(1, 23)) + ["X", "Y"]]
 

@@ -11,18 +11,20 @@ from collections import Counter
 from argparse import ArgumentParser, SUPPRESS
 from collections import defaultdict
 from subprocess import PIPE, Popen
-from shared.command_options import (
+
+from clair3.shared.command_options import (
     CommandOption,
     CommandOptionWithNoValue,
     ExecuteCommand,
     command_string_from,
     command_option_from
 )
-from shared.utils import file_path_from, executable_command_string_from, subprocess_popen, str2bool, log_warning
+from clair3.shared.utils import file_path_from, executable_command_string_from, subprocess_popen, str2bool, log_warning
 
-from shared.interval_tree import bed_tree_from, is_region_in
-from shared.utils import subprocess_popen, region_from, reference_sequence_from
-import shared.param_p as param
+from clair3.shared.interval_tree import bed_tree_from, is_region_in
+from clair3.shared.utils import subprocess_popen, region_from, reference_sequence_from
+import clair3.shared.param_p as param
+
 
 class InstancesClass(object):
     def __init__(self):

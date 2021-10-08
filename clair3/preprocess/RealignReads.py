@@ -7,13 +7,14 @@ from subprocess import PIPE
 from os.path import isfile
 from argparse import ArgumentParser, SUPPRESS
 from collections import defaultdict
+import imp
 
-import shared.param_f as param
-from shared.utils import file_path_from, subprocess_popen, reference_sequence_from, \
+import clair3.shared.param_f as param
+from clair3.shared.utils import file_path_from, subprocess_popen, reference_sequence_from, \
     IUPAC_base_to_ACGT_base_dict as BASE2ACGT, IUPAC_base_to_num_dict as BASE2NUM
 
-from shared.interval_tree import bed_tree_from
-from shared.intervaltree.intervaltree import IntervalTree
+from clair3.shared.interval_tree import bed_tree_from
+from clair3.shared.intervaltree.intervaltree import IntervalTree
 
 min_dbg_mapping_quality = min_dbg_base_quality = 20
 region_expansion_in_bp = expand_align_ref_region = 20
@@ -27,8 +28,8 @@ EXP = 5
 T_READ_NAME = L_CHAR_STR ** EXP
 L_CHAR_STR_EXP = [L_CHAR_STR ** i for i in range(EXP - 1, 0, -1)]
 
-realigner_mod = os.path.join(*(os.path.split(__file__)[:-1] + ('realign/realigner',)))
-dbg_mod = os.path.join(*(os.path.split(__file__)[:-1] + ('realign/debruijn_graph',)))
+realigner_mod = imp.find_module('clair3_realign')[1]
+dbg_mod = imp.find_module('clair3_debruijn_graph')[1]
 
 realigner = ctypes.cdll.LoadLibrary(realigner_mod)
 dbg = ctypes.cdll.LoadLibrary(dbg_mod)

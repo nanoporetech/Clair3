@@ -10,7 +10,7 @@ import sys
 from itertools import accumulate
 
 import clair3.model as model_path
-from shared.utils import str2bool
+from clair3.shared.utils import str2bool
 
 logging.basicConfig(format='%(message)s', level=logging.INFO)
 tables.set_blosc_max_threads(512)

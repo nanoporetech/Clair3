@@ -3,11 +3,11 @@ import os
 import sys
 from argparse import ArgumentParser, SUPPRESS
 from collections import defaultdict
-from shared.intervaltree.intervaltree import IntervalTree
 
+from clair3.shared.intervaltree.intervaltree import IntervalTree
+import clair3.shared.param_f as param
+from clair3.shared.utils import subprocess_popen
 
-import shared.param_f as param
-from shared.utils import subprocess_popen
 
 def FiterHeteSnpPhasing(args):
 

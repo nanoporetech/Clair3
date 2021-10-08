@@ -8,9 +8,9 @@ from collections import defaultdict
 from argparse import SUPPRESS
 from distutils.version import LooseVersion
 
-import shared.param_p as param
-from shared.interval_tree import bed_tree_from
-from shared.utils import file_path_from, folder_path_from, subprocess_popen, str2bool, \
+import clair3.shared.param_p as param
+from clair3.shared.interval_tree import bed_tree_from
+from clair3.shared.utils import file_path_from, folder_path_from, subprocess_popen, str2bool, \
     legal_range_from, log_error, log_warning
 
 MIN_CHUNK_LENGTH = 200000
